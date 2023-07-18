@@ -60,3 +60,13 @@ input:active, select:active {
 input:focus, select:focus {
     outline: none;
 }
+
+.custom-select {
+    display: inline-block;
+}
+
+.custom-select select {
+    appearance: none;
+    background-repeat: no-repeat;
+    background-position: 125px center;
+}
