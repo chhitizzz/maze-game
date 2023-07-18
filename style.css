@@ -25,3 +25,10 @@ html, body {
     margin: auto;
     border-radius: 10px;
 }
+
+#mazeContainer #mazeCanvas {
+    margin: 0;
+    display: block;
+    border: solid 2px #000;
+    height: 400px;
+}
