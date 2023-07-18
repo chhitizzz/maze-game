@@ -48,3 +48,15 @@ input, select {
     text-decoration: none;
     appearance: none;
 }
+
+input:hover, select:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+input:active, select:active {
+    background-color: #000;
+}
+
+input:focus, select:focus {
+    outline: none;
+}
