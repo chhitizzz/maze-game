@@ -32,3 +32,19 @@ html, body {
     border: solid 2px #000;
     height: 400px;
 }
+
+input, select {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
+}
