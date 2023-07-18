@@ -13,3 +13,15 @@ html, body {
     background-color: #fff;
     font-family: 'Open Sans', sans-serif;   
 }
+
+#view {
+    margin-top: 30px;
+}
+
+#mazeContainer {
+    top: 15px;
+    opacity: 0;
+    display: inline-block;
+    margin: auto;
+    border-radius: 10px;
+}
