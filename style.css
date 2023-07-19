@@ -95,3 +95,14 @@ input:focus, select:focus {
     margin-left: -150px;
     margin-top: -150px;
 }
+
+#page {
+    text-align: center;
+    height: auto;
+    width: auto;
+    margin: auto;
+}
+
+#page #menu {
+    
+}
