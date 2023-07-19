@@ -116,3 +116,13 @@ input:focus, select:focus {
     font-weight: 600;
     font-size: 3.2rem;
 }
+
+#page #view {
+    position: absolute;
+    top: 65px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+}
