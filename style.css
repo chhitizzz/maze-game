@@ -104,5 +104,8 @@ input:focus, select:focus {
 }
 
 #page #menu {
-    
+    margin: auto;
+    padding: 10px;
+    height: 65px;
+    box-sizing: border-box;
 }
