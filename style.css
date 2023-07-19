@@ -109,3 +109,10 @@ input:focus, select:focus {
     height: 65px;
     box-sizing: border-box;
 }
+
+#page #menu h1 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 3.2rem;
+}
