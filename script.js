@@ -31,3 +31,8 @@ function changeBrightness(factor, sprite) {
     virtCanvas.remove();
     return spriteOutput;
 }
+
+function displayVictoryMsg(moves) {
+    document.getElementById("moves").innerHTML = "You moved" + moves + " steps.";
+    toggleVisability("message-container");
+}
