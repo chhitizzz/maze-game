@@ -85,4 +85,21 @@ function Maze(Width, Height) {
     this.endCoord = function() {
         return endCoord;
     };
+
+    function genMap() {
+        mazeMap = new Array(height);
+        for(y = 0; y < height; y++) {
+            mazeMap[y] = new Array(width);
+            for(x = 0; x < width; ++x) {
+                mazeMap[y][x] = {
+                    n: false,
+                    s: false,
+                    e: false,
+                    w: false,
+                    visited: false,
+                    priorPos: null
+                };
+            }
+        }
+    }
 }
