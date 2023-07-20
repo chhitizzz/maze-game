@@ -102,4 +102,28 @@ function Maze(Width, Height) {
             }
         }
     }
+
+    function defineMaze() {
+        var isComp = false;
+        var move = false;
+        var cellsVisited = 1;
+        var numLoops = 0;
+        var maxLoops = 0;
+        var pos = {
+            x: 0,
+            y: 0
+        };
+        var numCells = width * height;
+        while (!isComp) {
+            move = false;
+            mazeMap[pos.x][pos.y].visited = true;
+
+            if(numLoops >= maxLoops) {
+                shuffle(dirs);
+                maxLoops = Math.round(rand(height / 8));
+                numLoops = 0;
+            }
+            numLoops++;
+        }
+    }
 }
