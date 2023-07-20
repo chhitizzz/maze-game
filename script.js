@@ -56,6 +56,21 @@ function Maze(Width, Height) {
             y: -1,
             x: 0,
             o: "s"
+        }, 
+        s: {
+            y: 1,
+            x: 0,
+            o: "n"
+        },
+        e: {
+            y: 0,
+            x: 1,
+            o: "w"
+        },
+        w: {
+            y: 0,
+            x: -1,
+            o: "e"
         }
-    }
+    };
 }
