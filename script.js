@@ -36,3 +36,11 @@ function displayVictoryMsg(moves) {
     document.getElementById("moves").innerHTML = "You moved" + moves + " steps.";
     toggleVisability("message-container");
 }
+
+function toggleVisability(id) {
+    if(document.getElementById(id).style.visibility == "visible") {
+        document.getElementById(id).style.visibility == "hidden";
+    } else {
+        document.getElementById(id).style.visibility = "visible";
+    }
+}
