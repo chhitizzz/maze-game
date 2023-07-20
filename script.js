@@ -124,6 +124,28 @@ function Maze(Width, Height) {
                 numLoops = 0;
             }
             numLoops++;
+            for(index = 0; index < dirs.length; index++) {
+                var direction = dirs[index];
+                var nx = pos.x + modDir[direction].x;
+                var ny = pos.y + modDir[direction].y;
+
+                if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
+                    if(!mazeMap[nx][ny].visited) {
+                        mazeMap[pos.x][pos.y][direction] = true;
+                        mazeMap[nx][ny][modDir[direction].o] = true;
+
+                        mazeMap[nx][ny].priorPos = pos;
+
+                        pos = {
+                            x: nx,
+                            y: ny
+                        };
+                        cellsVisited++;
+                        move = true;
+                        break;
+                    }
+                }
+            }
         }
     }
 }
