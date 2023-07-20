@@ -39,8 +39,23 @@ function displayVictoryMsg(moves) {
 
 function toggleVisability(id) {
     if(document.getElementById(id).style.visibility == "visible") {
-        document.getElementById(id).style.visibility == "hidden";
+        document.getElementById(id).style.visibility = "hidden";
     } else {
         document.getElementById(id).style.visibility = "visible";
+    }
+}
+
+function Maze(Width, Height) {
+    var mazeMap;
+    var width = Width;
+    var height = Height;
+    var startCoord, endCoord;
+    var dirs = ["n", "s", "e", "w"];
+    var modDir = {
+        n: {
+            y: -1,
+            x: 0,
+            o: "s"
+        }
     }
 }
