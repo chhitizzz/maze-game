@@ -9,3 +9,11 @@ function shuffle(a) {
     }
     return a;
 }
+
+function changeBrightness(factor, sprite) {
+    var virtCanvas = document.createElement("canvas");
+    virtCanvas.width = 500;
+    virtCanvas.height = 500;
+    var context = virtCanvas.getContext("2d");
+    context.drawImage(sprite, 0, 0, 500, 500);
+}
