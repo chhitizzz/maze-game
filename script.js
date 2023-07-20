@@ -73,4 +73,16 @@ function Maze(Width, Height) {
             o: "e"
         }
     };
+
+    this.map = function() {
+        return mazeMap;
+    };
+    
+    this.startCoord = function() {
+        return startCoord;
+    };
+
+    this.endCoord = function() {
+        return endCoord;
+    };
 }
