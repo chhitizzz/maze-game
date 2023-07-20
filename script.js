@@ -26,5 +26,8 @@ function changeBrightness(factor, sprite) {
     }
     context.putImageData(imgData, 0, 0);
 
-    
+    var spriteOutput = new Image();
+    spriteOutput.src = virtCanvas.toDataURL();
+    virtCanvas.remove();
+    return spriteOutput;
 }
