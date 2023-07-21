@@ -218,4 +218,16 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
         drawMap();
         drawEndMethod();
     };
+
+    function drawCell(xCord, yCord, cell) {
+        var x = xCord * cellSize;
+        var y = yCord * cellSize;
+
+        if (cell.n == false) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x + cellSize, y);
+            ctx.stroke();
+        }
+    }
 }
