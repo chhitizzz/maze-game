@@ -206,3 +206,16 @@ function Maze(Width, Height) {
     defineMaze();
 }
 
+function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
+    var map = Maze.map();
+    var cellSize = cellsize;
+    var drawEndMethod;
+    ctx.lineWidth = cellSize / 40;
+
+    this.redrawMaze = function(size) {
+        cellSize = size;
+        ctx.lineWidth = cellSize / 50;
+        drawMap();
+        drawEndMethod();
+    };
+}
