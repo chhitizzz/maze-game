@@ -146,6 +146,14 @@ function Maze(Width, Height) {
                     }
                 }
             }
+
+            if(!move) {
+                pos = mazeMap[pos.x][pos.y].priorPos;
+            }
+            if (numCells == cellsVisited) {
+                isComp = true;
+            }
         }
     }
+
 }
