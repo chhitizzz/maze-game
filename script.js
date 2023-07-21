@@ -156,4 +156,19 @@ function Maze(Width, Height) {
         }
     }
 
+    function defineStartEnd() {
+        switch(rand(4)) {
+            case 0:
+                startCoord = {
+                    x: 0,
+                    y: 0
+                };
+                endCoord = {
+                    x: height - 1,
+                    y: width - 1
+                };
+                break;
+            
+        }
+    }
 }
