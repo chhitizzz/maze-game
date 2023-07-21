@@ -229,5 +229,26 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
             ctx.lineTo(x + cellSize, y);
             ctx.stroke();
         }
+
+        if (cell.s === false) {
+            ctx.beginPath();
+            ctx.moveTo(x, y + cellSize);
+            ctx.lineTo(x + cellSize, y + cellSize);
+            ctx.stroke();
+        }
+
+        if (cell.e === false) {
+            ctx.beginPath();
+            ctx.moveTo(x + cellSize, y);
+            ctx.lineTo(x + cellSize, y + cellSize);
+            ctx.stroke();
+        }
+
+        if (cell.w === false) {
+            ctx.beginPath();
+            ctx.moveTo(x, y);
+            ctx.lineTo(x, y + cellSize);
+            ctx.stroke();
+        }
     }
 }
