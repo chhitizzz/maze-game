@@ -251,4 +251,12 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
             ctx.stroke();
         }
     }
+
+    function drawMap() {
+        for (x = 0; x < map.length; x++) {
+            for (y = 0; y < map[x].length; y++){
+                drawCell(x, y, map[x][y]);
+            }
+        }
+    }
 }
