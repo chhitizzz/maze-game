@@ -168,7 +168,26 @@ function Maze(Width, Height) {
                     y: width - 1
                 };
                 break;
-            
+            case 1:
+                startCoord = {
+                    x: 0,
+                    y: width - 1
+                };
+                endCoord = {
+                    x: height - 1,
+                    y: 0
+                };
+                break;
+            case 2: 
+                startCoord = {
+                    x: height - 1,
+                    y: 0
+                };
+                endCoord = {
+                    x: 0,
+                    y: width - 1
+                };
+                break;
         }
     }
 }
