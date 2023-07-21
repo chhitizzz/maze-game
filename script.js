@@ -201,4 +201,8 @@ function Maze(Width, Height) {
         }
     }
     
+    genMap();
+    defineStartEnd();
+    defineMaze();
 }
+
