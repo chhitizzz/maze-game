@@ -352,6 +352,11 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                 0, 
                 2 * Math.PI
             );
+            ctx.fill();
+            if (coord.x === maze.endCoord().x && coord.y === maze.endCoord().y) {
+                onComplete(moves);
+                player.unbindKeyDown();
+            }
         }
         
     }
