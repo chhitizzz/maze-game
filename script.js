@@ -337,4 +337,9 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
         var cellSize = _cellsize;
         var halfCellSize = cellSize / 2;
 
+        this.redrawPlayer = function(_cellsize) {
+            cellSize = _cellsize;
+            drawSpriteImg(cellCoords);
+        };
+        
     }
