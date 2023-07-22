@@ -319,3 +319,22 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
     drawMap();
     drawEndMethod();
 }
+
+    function Player(maze, c, _cellsize, onComplete, sprite = null) {
+        var ctx = c.getContext("2d");
+        var drawSprite;
+        var moves = 0;
+        drawSprite = drawSpriteCircle;
+        if (sprite != null) {
+            drawSprite = drawSpriteImg;
+        }
+        var player = this;
+        var map = maze.map();
+        var cellCoords = {
+            x: maze.startCoord().x,
+            y: maze.startCoord().y
+        };
+        var cellSize = _cellsize;
+        var halfCellSize = cellSize / 2;
+
+    }
