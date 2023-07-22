@@ -341,5 +341,17 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
             cellSize = _cellsize;
             drawSpriteImg(cellCoords);
         };
+
+        function drawSpriteCircle(coord){
+            ctx.beginPath();
+            ctx.fillStyle = "yellow";
+            ctx.arc (
+                (coord.x + 1) * cellSize - halfCellSize,
+                (coord.y + 1) * cellSize - halfCellSize,
+                halfCellSize - 2,
+                0, 
+                2 * Math.PI
+            );
+        }
         
     }
