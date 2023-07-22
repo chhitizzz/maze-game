@@ -259,4 +259,25 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
             }
         }
     }
+
+    function drawEndFlag() {
+        var coord = Maze.endCoord();
+        var gridSize = 4;
+        var fraction = cellSize / gridSize - 2;
+        var colorSwap = true;
+        for (let y = 0; y < gridSize; y++) {
+            if (gridSize % 2 == 0) {
+                colorSwap = !colorSwap;
+            }
+            for (let x = 0; x < gridSize; x++) {
+                ctx.beginPath();
+                ctx.rect(
+                    coord.x * cellSize + x * fraction + 4.5,
+                    coord.y * cellSize + y * fraction + 4.5,
+                    fraction,
+                    fraction
+                );
+            }
+        }
+    }
 }
