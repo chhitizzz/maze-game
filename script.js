@@ -446,6 +446,41 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
 
         this.bindKeyDown = function () {
             window.addEventListener("keydown", check, false);
+
+            $("#view").swipe({
+                swipe: function (
+                    event, 
+                    direction,
+                    distance,
+                    duration,
+                    fingerCount,
+                    fingerData
+                ) {
+                    console.log(direction);
+                    switch(direction) {
+                        case "up":
+                            check({
+                                keyCode: 38
+                            });
+                            break;
+                        case "down":
+                            check({
+                                keyCode: 40
+                            });
+                            break;
+                        case "left":
+                            check({
+                                keyCode: 37
+                            });
+                            break;
+                        case "right":
+                            check({
+                                keyCode: 39
+                            });
+                            break;
+                    }
+                },
+            
         }
         
     }
