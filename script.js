@@ -373,6 +373,10 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                 cellSize - offsetRight,
                 cellSize - offsetRight
             );
+            if (coord.x === maze.endCoord().x && coord.y === maze.endCoord().y) {
+                onComplete(moves);
+                player.unbindKeyDown();
+            }
         }
         
     }
