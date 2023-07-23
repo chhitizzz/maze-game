@@ -378,5 +378,16 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                 player.unbindKeyDown();
             }
         }
+
+        function removeSprite(coord) {
+            var offsetLeft = cellSize / 50;
+            var offsetRight = cellSize / 25;
+            ctx.clearRect (
+                coord.x * cellSize + offsetLeft,
+                coord.y * cellSize + offsetLeft,
+                cellSize - offsetRight,
+                cellSize - offsetRight,
+            );
+        }
         
     }
