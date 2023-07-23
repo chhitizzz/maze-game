@@ -429,7 +429,23 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                         drawSprite(cellCoords);
                     }
                     break;
+
+                case 83:
+                case 40:
+                    if (cell.s == true) {
+                        removeSprite(cellCoords);
+                        cellCoords = {
+                            x: cellCoords.x,
+                            y: cellCoords.y + 1
+                        };
+                        drawSprite(cellCoords);
+                    }
+                    break;
             }
+        }
+
+        this.bindKeyDown = function () {
+            window.addEventListener("keydown", check, false);
         }
         
     }
