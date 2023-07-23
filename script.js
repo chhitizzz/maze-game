@@ -480,7 +480,6 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                             break;
                     }
                 },
-            
-        }
-        
-    }
+                threshold: 0
+        });
+    }}
