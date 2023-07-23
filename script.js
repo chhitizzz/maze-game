@@ -482,4 +482,15 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                 },
                 threshold: 0
         });
-    }}
+    };
+
+    this.unbindKeyDown = function() {
+        window.removeEventListener("keydown", check, false);
+        $("#view").swipe("destroy");
+    };
+
+    drawSprite(maze.startCoord());
+
+    this.bindKeyDown();
+    }
+    
