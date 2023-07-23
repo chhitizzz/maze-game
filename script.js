@@ -389,5 +389,47 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
                 cellSize - offsetRight,
             );
         }
+
+        function check(e) {
+            var cell = map[cellCoords.x][cellCoords.y];
+            moves++;
+            switch(e.keyCode) {
+                case 65:
+                case 37:
+                    if (cell.w == true) {
+                        removeSprite(cellCoords);
+                        cellCoords = {
+                            x: cellCoords.x - 1,
+                            y: cellCoords.y
+                        };
+                        drawSprite(cellCoords);
+                    }
+                    break;
+
+                case 87:
+                case 38:
+                    if(cell.n == true) {
+                        removeSprite(cellCoords);
+                        cellCoords = {
+                            x: cellCoords.x,
+                            y: cellCoords.y - 1
+                        };
+                        drawSprite(cellCoords);
+                    }
+                    break;
+                
+                case 68:
+                case 39:
+                    if (cell.e == true) {
+                        removeSprite(cellCoords);
+                        cellCoords = {
+                            x: cellCoords.x + 1,
+                            y: cellCoords.y
+                        };
+                        drawSprite(cellCoords);
+                    }
+                    break;
+            }
+        }
         
     }
