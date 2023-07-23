@@ -493,4 +493,11 @@ function DrawMaze(Maze, ctx, cellsize, endSprite = null) {
 
     this.bindKeyDown();
     }
-    
+
+    var mazeCanvas = document.getElementById("mazeCanvas");
+    var ctx = mazeCanvas.getContext("2d");
+    var sprite;
+    var finishSprite;
+    var maze, draw, player;
+    var cellSize;
+    var difficulty;
