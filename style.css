@@ -29,7 +29,7 @@ html, body {
 #mazeContainer #mazeCanvas {
     margin: 0;
     display: block;
-    border: solid 2px #000;
+    border: solid 3px #000;
     height: 400px;
 }
 
@@ -133,6 +133,7 @@ input:focus, select:focus {
 }
 
 #instructions {
+    font-size: larger;
     margin-top: 425px;
 }
 
