@@ -526,7 +526,7 @@ function rand(max) {
     };
     sprite = new Image();
     sprite.src =
-      "./key.png" +
+      "./football.png" +
       "?" +
       new Date().getTime();
     sprite.setAttribute("crossOrigin", " ");
