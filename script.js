@@ -538,7 +538,7 @@ function rand(max) {
     };
   
     finishSprite = new Image();
-    finishSprite.src = "./home.png"+
+    finishSprite.src = "./goal-post.png"+
     "?" +
     new Date().getTime();
     finishSprite.setAttribute("crossOrigin", " ");
