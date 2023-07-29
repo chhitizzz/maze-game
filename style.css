@@ -128,8 +128,8 @@ input:focus, select:focus {
 }
 
 .border {
-    border: 10px #000 solid;
-    border-radius: 10px;
+    border: 30px #000 solid;
+    border-radius: 30px;
 }
 
 #instructions {

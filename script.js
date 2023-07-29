@@ -33,8 +33,8 @@ function rand(max) {
   }
   
   function displayVictoryMess(moves) {
-    document.getElementById("moves").innerHTML = "You Moved " + moves + " Steps.";
-    toggleVisablity("Message-Container");  
+    document.getElementById("moves").innerHTML = "You moved " + moves + " steps.";
+    toggleVisablity("message-container");  
   }
   
   function toggleVisablity(id) {
@@ -128,21 +128,16 @@ function rand(max) {
           var ny = pos.y + modDir[direction].y;
   
           if (nx >= 0 && nx < width && ny >= 0 && ny < height) {
-            //Check if the tile is already visited
             if (!mazeMap[nx][ny].visited) {
-              //Carve through walls from this tile to next
               mazeMap[pos.x][pos.y][direction] = true;
               mazeMap[nx][ny][modDir[direction].o] = true;
   
-              //Set Currentcell as next cells Prior visited
               mazeMap[nx][ny].priorPos = pos;
-              //Update Cell position to newly visited location
               pos = {
                 x: nx,
                 y: ny
               };
               cellsVisited++;
-              //Recursively call this method on the next tile
               move = true;
               break;
             }
@@ -150,8 +145,6 @@ function rand(max) {
         }
   
         if (!move) {
-          //  If it failed to find a direction,
-          //  move the current position back to the prior cell and Recall the method.
           pos = mazeMap[pos.x][pos.y].priorPos;
         }
         if (numCells == cellsVisited) {
@@ -499,7 +492,6 @@ function rand(max) {
   var maze, draw, player;
   var cellSize;
   var difficulty;
-  // sprite.src = 'media/sprite.png';
   
   window.onload = function() {
     let viewWidth = $("#view").width();
@@ -512,7 +504,6 @@ function rand(max) {
       ctx.canvas.height = viewWidth - viewWidth / 100;
     }
   
-    //Load and edit sprites
     var completeOne = false;
     var completeTwo = false;
     var isComplete = () => {
