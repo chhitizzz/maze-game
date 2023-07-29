@@ -35,7 +35,7 @@ html, body {
 
 input, select {
     cursor: pointer;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #000;
     height: 45px;
     width: 150px;
     padding: 10px;
