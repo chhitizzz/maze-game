@@ -33,9 +33,9 @@ html, body {
     height: 400px;
 }
 
-input, select {
+input{
     cursor: pointer;
-    background-color: #000;
+    background-color: #14A44D;
     height: 45px;
     width: 150px;
     padding: 10px;
@@ -49,12 +49,24 @@ input, select {
     appearance: none;
 }
 
-input:hover, select:hover {
-    background-color: rgba(0, 0, 0, 0.7);
+select {
+    cursor: pointer;
+    background-color: #1e88e5 ;
+    height: 45px;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    appearance: none;
 }
 
-input:active, select:active {
-    background-color: #000;
+input:active{
+    background-color: #14A44D ;
 }
 
 input:focus, select:focus {
@@ -73,7 +85,7 @@ input:focus, select:focus {
 
 #message-container {
     visibility: hidden;
-    color: #fff;
+    color: #000;
     display: block;
     width: 100vw;
     height: 100vh;
@@ -82,7 +94,7 @@ input:focus, select:focus {
     left: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #fff;
     z-index: 1;
 }
 
@@ -129,12 +141,12 @@ input:focus, select:focus {
 
 .border {
     border: 30px #000 solid;
-    border-radius: 30px;
+    border-radius: 20px;
 }
 
 #instructions {
     font-size: larger;
-    margin-top: 425px;
+    margin-top: 430px;
 }
 
 @media only screen and (max-width: 400px) {
